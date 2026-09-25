@@ -1,0 +1,210 @@
+//contact section
+.contact-section {
+    padding: 120px 0 120px;
+    background-image: url(../images/home-3/contact-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    z-index: 1;
+
+    @include for-md {
+        padding: 100px 0 100px;
+    }
+
+    .contact-werpppar {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+
+        @include for-xxl {
+            left: -15%;
+        }
+
+        @include media-breakpoint-only(xl) {
+            left: -25%;
+        }
+
+        @include for-lg {
+            left: -27%;
+        }
+
+        @include for-md {
+            left: -40%;
+        } 
+        
+        @include for-sm {
+            display: none;
+        }
+
+        @include media-breakpoint-only(md) {
+            display: none;
+        }
+    }
+
+    .contact-thumb {
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        line-height: 0;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 200%;
+            height: 0%;
+            left: 50%;
+            top: 50%;
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%) rotate(-45deg);
+            z-index: 1;
+        }
+
+        &:hover::before {
+            height: 200%;
+            transition: all 600ms linear;
+            background-color: transparent;
+        }
+
+        figure {
+            margin: 0;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .contact-form-box {
+        .form-box {
+            display: flex;
+            align-items: center;
+            margin-bottom: 35px;
+            position: relative;
+
+            input {
+                transition: 0.3s;
+                outline: 0;
+                width: 100%;
+                height: 60px;
+                background: transparent;
+                border-radius: 10px;
+                padding: 0 25px;
+                border: 1px solid #686868;
+
+                &::placeholder {
+                    color: var(--text-color);
+                    font-family: var(--text-font);
+                    font-weight: 400;
+                    font-size: 16px;
+                }
+            }
+
+            .option-box {
+                width: 100%;
+
+                .wide {
+                    color: var(--text-color);
+                    font-family: var(--text-font);
+                    font-weight: 400;
+                    font-size: 16px;
+                    border: 1px solid #686868;
+                    background: transparent;
+                    width: 100%;
+                    padding: 13px 30px 13px 30px;
+                    border-radius: 5px;
+                }
+
+                select {
+                    transition: 0.3s;
+                    outline: 0;
+                    width: 100%;
+                    height: 60px;
+                    border: 1px solid #686868;
+                    border-radius: 10px;
+                    padding: 0 25px;
+                    background: transparent;
+                }
+            }
+
+            textarea {
+                width: 100%;
+                height: 200px;
+                border: 1px solid #686868;
+                border-radius: 10px;
+                padding: 25px 20px;
+                background: transparent;
+                outline: 0;
+
+                &::placeholder {
+                    color: var(--text-color);
+                    font-family: var(--text-font);
+                    font-weight: 400;
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .contact-form {
+
+            margin-top: 15px;
+
+            button {
+                display: inline-block;
+                font-family: var(--text-font);
+                color: var(--theme-color-white);
+                background-color: var(--theme-color2);
+                padding: 15px 40px;
+                font-weight: 500;
+                font-size: 18px;
+                border-radius: 45px;
+                position: relative;
+                z-index: 1;
+                transition: all 300ms ease;
+
+                i {
+                    display: inline-block;
+                    right: -56px;
+                    font-size: 16px;
+                    font-weight: 400;
+                    top: 2px;
+                    height: 56px;
+                    width: 56px;
+                    line-height: 56px;
+                    text-align: center;
+                    border-radius: 100%;
+                    position: absolute;
+                    background: var(--theme-color2);
+                    transition: all 300ms ease;
+                    transform: rotate(-45deg);
+                }
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 0;
+                    height: 100%;
+                    left: 50%;
+                    top: 0;
+                    background: var(--theme-color1);
+                    z-index: -1;
+                    border-radius: 45px;
+                    transition: all 300ms ease;
+                }
+
+                &:hover::after {
+                    width: 100%;
+                    left: 0;
+                }
+
+                &:hover {
+                    i {
+                        background: var(--theme-color1);
+                        transform: rotate(0deg);
+                    }
+                }
+            }
+        }
+    }
+}

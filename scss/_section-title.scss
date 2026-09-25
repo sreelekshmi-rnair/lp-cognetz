@@ -1,0 +1,117 @@
+/*** 
+
+==============================
+Section Title
+==============================
+
+***/
+.sec-title {
+    margin-bottom: 50px;
+
+    .section-sub-title {
+        .sub-title {
+            font-family: var(--title-font);
+            color: var(--theme-color2);
+            border-radius: 30px;
+            font-weight: 500;
+            font-size: 18px;
+            padding-left: 40px;
+            text-transform: uppercase;
+            display: inline-block;
+            position: relative;
+
+            @include for-xs {
+                font-size: 16px;
+
+                &::before {
+                    display: block;
+                }
+            }
+
+            &::before {
+                position: absolute;
+                content: "";
+                left: 0;
+                top: 2px;
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                border: 2px solid var(--theme-color2);
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                left: 6px;
+                top: 8px;
+                height: 8px;
+                width: 8px;
+                border-radius: 50%;
+                background: var(--theme-color2);
+            }
+
+        }
+    }
+
+    .section-title {
+        .title {
+            color: var(--heading-color);
+            font-family: var(--title-font);
+            font-weight: 700;
+            font-size: 45px;
+            line-height: 55px;
+            margin: 0;
+
+            span {
+                color: var(--theme-color2);
+            }
+
+            @include media-breakpoint-only(md) {
+                font-size: 35px;
+                line-height: 40px;
+            }
+
+            @include for-sm {
+                font-size: 30px;
+                line-height: 42px;
+            }
+
+            @include for-xs {
+                font-size: 25px;
+                line-height: 30px;
+            }
+
+            @include media-breakpoint-only(lg) {
+                font-size: 32px;
+                line-height: 45px;
+            }
+        }
+    }
+
+    .section-desc {
+        p {
+            font-size: 18px;
+            line-height: 28px;
+            width: 80%;
+            margin: 15px 0 0;
+
+        }
+    }
+
+    &.two {
+        .section-sub-title {
+            .sub-title {
+                color: var(--theme-color-white);
+
+                &::before {
+                    border: 2px solid var(--theme-color-white);
+                }
+
+                &::after {
+                    background: var(--theme-color-white);
+                }
+
+            }
+        }
+    }
+}

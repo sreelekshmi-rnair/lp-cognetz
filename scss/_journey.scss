@@ -1,0 +1,156 @@
+/* ======================================
+   Jounrney Section
+====================================== */
+.journey-section {
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(180deg, #FFFFFF 0%, #EFE5FF 100%);
+    padding: 0 0 103px;
+
+    .sec-title {
+        margin-bottom: 67px;
+    }
+
+    .bg-bular {
+        position: absolute;
+        bottom: 14%;
+        right: 27%;
+        height: 550px;
+        width: 570px;
+        background: radial-gradient(50% 50% at 50% 50%, rgba(107, 55, 255, 0.44) 0%, rgba(107, 55, 255, 0) 100%);
+        z-index: -1;
+    }
+
+    .journey-shape1 {
+        position: absolute;
+        left: 8%;
+        bottom: 18%;
+        z-index: -1;
+        animation: bounceleft 8s linear infinite;
+        filter: brightness(1);
+        opacity: 0.5;
+    }
+
+    &.style_two {
+        padding: 120px 0 103px;
+    }
+
+}
+
+
+/* ======================================
+   Review Grid
+====================================== */
+
+.journey-right-warp {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    margin-right: 10px;
+
+    @include for-xs {
+        display: block;
+    }
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+
+    @include for-lg {
+        margin-left: 15px;
+        margin-top: 20px;
+    }
+
+    .review-card {
+        background: url(../images/main-home/revew-bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+        position: relative;
+        padding: 50px 0 20px;
+
+        .iocn {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            display: inline-block;
+        }
+
+        .stars {
+            li {
+                display: inline-block;
+                color: #FFD06A;
+                font-size: 16px;
+                margin: 18px 0 10px;
+
+            }
+        }
+
+        p {
+            color: #666;
+            font-weight: 500;
+        }
+    }
+}
+
+// counter main box
+
+.counter-main-bx {
+    background: linear-gradient(0deg, #FFFFFF 0%, #E0FFF1 100%);
+    padding: 54px 0 50px;
+    border-radius: 15px;
+    width: 267px;
+
+    @include for-xl {
+        width: 220px;
+    }
+
+    @include for-lg {
+        width: 100%;
+    }
+
+    @include for-xs {
+        width: 97%;
+        margin-left: 15px;
+        margin-top: 30px;
+    } 
+    @include for-xxs {
+        width: 96%;
+    }
+
+    .counter-item {
+        text-align: center;
+        border-bottom: 1px solid #61616152;
+        margin-bottom: 44px;
+        padding-bottom: 41px;
+
+        &:last-child {
+            border-bottom: 0;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        .counter-content {
+            h1 {
+                display: inline-block;
+                font-size: 45px;
+                font-weight: 700;
+                margin: 0;
+
+                @include for-xxs {
+                    font-size: 35px;
+                }
+            }
+
+            p {
+                font-weight: 500;
+                font-size: 16px;
+                text-transform: uppercase;
+                margin: 13px 0 0;
+
+            }
+        }
+    }
+}

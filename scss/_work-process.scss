@@ -1,0 +1,228 @@
+/*** 
+
+====================================================================
+    Process Section
+====================================================================
+
+***/
+
+.process-section {
+    position: relative;
+    padding: 115px 0 82px;
+    z-index: 1;
+    background: url(../images/home-2/prosess-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
+
+    @include for-md {
+        padding: 100px 0 60px;
+    }
+
+    .other-box {
+        margin-left: 295px;
+
+        @include for-xl {
+            margin-left: 100px;
+        }
+
+        @include for-lg {
+            margin-left: 20px;
+        }
+    }
+
+    .process-shape {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+    }
+
+    .process-shape2 {
+        position: absolute;
+        right: 4%;
+        top: 18%;
+        z-index: -1;
+        opacity: 0.6;
+    }
+
+}
+
+.process-border {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 21px;
+        bottom: 234px;
+        margin: auto;
+        right: 0;
+        width: 100%;
+        height: 1px;
+        background-image: repeating-linear-gradient(to right, var(--theme-color2), var(--theme-color2) 7px, transparent 4px, transparent 12px);
+
+        @include for-lg {
+            bottom: 228px;
+        }
+
+        @include for-md {
+            bottom: 254px;
+        }
+
+        @include media-breakpoint-only(md) {
+            display: none;
+        }
+
+        @include for-sm {
+            display: none;
+        }
+    }
+}
+
+.process-single-box {
+    padding: 0;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 30px;
+
+    @include for-md {
+        text-align: center;
+    }
+
+    @include for-sm {
+        padding: 0 99px 0;
+    }
+
+    @include for-xs {
+        padding: 0 30px 0;
+    }
+
+    .process-thumb {
+        position: relative;
+        z-index: 1;
+        transition: 0.5s;
+        display: inline-block;
+
+        @include for-sm {
+
+            display: block;
+        }
+    }
+
+    &:hover {
+        .process-thumb {
+            transform: scaleX(-1);
+        }
+    }
+
+    .process-number {
+        background: url(../images/home-2/prosess-nam-sp.png);
+        background-repeat: no-repeat;
+        display: block;
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--text-color);
+        height: 65px;
+        width: 65px;
+        line-height: 65px;
+        text-align: center;
+        margin: 30px 0 0;
+        transition: 0.5s;
+
+        @include media-breakpoint-only(md) {
+            display: none;
+        }
+
+        @include for-sm {
+
+            display: inline-block;
+        }
+    }
+
+    .process-content {
+        margin-right: 35px;
+
+        @include for-xl {
+            margin-right: 0;
+        }
+
+        h4 {
+            font-weight: 500;
+            font-size: 26px;
+            margin: 33px 0 18px;
+            color: var(--theme-color1);
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 28px;
+
+            @include for-lg {
+                font-size: 16px;
+                line-height: 26px;
+            }
+
+            @include for-md {
+                font-size: 14px;
+            }
+
+            @include for-sm {
+                font-size: 16px;
+            }
+
+            @include media-breakpoint-only(md) {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &:hover .process-number {
+        transform: scale3d(1.3, 1.3, 1.3);
+    }
+
+
+}
+
+// right icon box
+
+.right-icon-box {
+    margin-left: -63px;
+
+    @include media-breakpoint-only(md) {
+        margin-left: 0;
+    }
+
+    @include for-sm {
+        margin-left: 0;
+    }
+
+    .icon {
+        display: inline-block;
+    }
+
+    p {
+        font-size: 18px;
+        margin-top: 29px;
+        line-height: 28px;
+        width: 60%;
+
+        @include for-md {
+            width: 100%;
+        }
+
+        @include media-breakpoint-only(md) {
+            width: 60%;
+        }
+
+        @include for-sm {
+            width: 58%;
+        }
+
+        @include for-xs {
+            width: 100%;
+        }
+
+    }
+}

@@ -1,0 +1,80 @@
+// marquee section one environmet
+.marquee-section {
+    position: relative;
+    padding: 41px 0 38px;
+    z-index: 1;
+    background-color: var(--theme-color2);
+
+    .marquee {
+        position: relative;
+        --duration: 30s;
+        --gap: 0px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        overflow: hidden;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        gap: 0px;
+
+        .marquee-block {
+            -ms-flex-negative: 0;
+            flex-shrink: 0;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -ms-flex-pack: distribute;
+            justify-content: space-around;
+            gap: 0px;
+            min-width: 93%;
+            -webkit-animation: scroll 30s linear infinite;
+            animation: scroll 30s linear infinite;
+
+            h3 {
+                font-size: 40px;
+                color: var(--theme-color-white);
+                font-weight: 600;
+                margin: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                span {
+                    display: inline-block;
+                    margin: 0 50px;
+                    transition: 0.5s;
+                    animation: rotateme 18s linear infinite;
+                }
+            }
+        }
+    }
+}
+
+@-webkit-keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    100% {
+        -webkit-transform: translateX(calc(-100% - var(--gap)));
+        transform: translateX(calc(-100% - var(--gap)));
+    }
+}
+
+@keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    100% {
+        -webkit-transform: translateX(calc(-100% - var(--gap)));
+        transform: translateX(calc(-100% - var(--gap)));
+    }
+}

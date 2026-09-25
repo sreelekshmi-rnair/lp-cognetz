@@ -1,0 +1,354 @@
+/*=======================================
+    Start Team Details
+=========================================*/
+
+.team-details {
+    padding: 120px 0 120px;
+    background: linear-gradient(180deg, #FFFFFF 0%, #EFE5FF 100%);
+    position: relative;
+    overflow: hidden;
+
+    .team-shape1 {
+        position: absolute;
+        left: 0;
+        bottom: -44px;
+
+        @include for-md {
+            display: none;
+        }
+    }
+
+    .team-shape2 {
+        position: absolute;
+        right: 0;
+        top: -44px;
+
+        @include for-md {
+            display: none;
+        }
+    }
+
+}
+
+.team-card {
+    display: flex;
+    background: var(--theme-color-white);
+    gap: 90px;
+    align-items: center;
+    position: relative;
+
+    @include for-md {
+        gap: 35px;
+    }
+
+    @include media-breakpoint-only(md) {
+        display: block;
+    }
+
+    @include for-sm {
+        display: block;
+    }
+
+    &::before {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        height: 10px;
+        width: 100%;
+        background: #EFE5FE;
+    }
+
+    .team-img {
+        flex-shrink: 0;
+        position: relative;
+        z-index: 1;
+
+        @include media-breakpoint-only(md) {
+            margin-bottom: 20px;
+        }
+
+        @include for-sm {
+            margin-bottom: 20px;
+        }
+    }
+
+    .team-info {
+        padding: 0 40px 30px;
+
+        h2 {
+            font-size: 40px;
+            font-weight: 600;
+            margin: 0;
+
+            @include media-breakpoint-only(md) {
+                font-size: 30px;
+            }
+
+            @include for-sm {
+                font-size: 30px;
+            }
+
+        }
+
+        .designation {
+            font-size: 17px;
+            padding-left: 45px;
+            margin: 8px 0 25px;
+            display: inline-block;
+            position: relative;
+
+            @include media-breakpoint-only(md) {
+                font-size: 16px;
+                width: 100%;
+            }
+
+            @include for-sm {
+                width: 100%
+            }
+
+            &::before {
+                position: absolute;
+                content: "";
+                left: 0;
+                bottom: 12px;
+                width: 35px;
+                height: 1px;
+                background: var(--text-color);
+            }
+        }
+
+        .team-desc {
+            font-size: 17px;
+            width: 87%;
+            margin-bottom: 40px;
+        }
+
+        .contact-info {
+            .contact-box {
+                display: flex;
+                align-items: center;
+                gap: 30px;
+                margin-bottom: 40px;
+
+                @include for-xs {
+                    gap: 20px;
+                }
+
+                .icon {
+                    height: 85px;
+                    width: 85px;
+                    line-height: 85px;
+                    text-align: center;
+                    border: 1px solid #68686833;
+                    flex-shrink: 0;
+                    border-radius: 50%;
+
+                    i {
+                        background: linear-gradient(180deg, #FFFFFF 0%, #EFE5FF 100%);
+                        height: 65px;
+                        width: 65px;
+                        line-height: 65px;
+                        text-align: center;
+                        display: inline-block;
+                        border-radius: 50%;
+                        color: var(--theme-color2);
+                        font-size: 22px;
+                    }
+                }
+
+                span {
+                    font-size: 16px;
+                    font-weight: 500;
+                    font-family: var(--title-font);
+                    display: inline-block;
+                    margin-bottom: 11px;
+                }
+
+                p {
+                    font-size: 24px;
+                    font-weight: 600;
+                    margin: 0;
+                    color: var(--heading-color);
+                    font-family: var(--title-font);
+                    cursor: pointer;
+
+                    @include for-xs {
+                        font-size: 18px;
+                    }
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .social-links {
+            position: absolute;
+            right: 110px;
+            bottom: 60px;
+
+            @include for-md {
+                right: 40px;
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 45px;
+                height: 45px;
+                line-height: 45px;
+                background: var(--heading-color);
+                color: var(--theme-color-white);
+                font-size: 16px;
+                transition: 0.3s;
+                margin-bottom: 10px;
+
+                &:hover {
+                    background: #6c63ff;
+                    color: #fff;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.team-info-details {
+
+    h2.team-info-title {
+        font-size: 45px;
+        font-weight: 600;
+
+        @include for-xs {
+            font-size: 30px;
+        }
+    }
+
+}
+
+.team-qualifications {
+    h2.team-qualify-title {
+        font-size: 22px;
+        font-weight: 500;
+        margin: 50px 0 28px;
+    }
+
+    .team-list ul {
+        li {
+            font-size: 17px;
+            font-weight: 400;
+            font-family: var(--text-font);
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 22px;
+
+            &::before {
+                position: absolute;
+                left: 0;
+                top: 8px;
+                height: 9px;
+                width: 9px;
+                background: #686868;
+                content: '';
+                border-radius: 20px;
+            }
+        }
+    }
+}
+
+.team-contact-form {
+    background: var(--theme-color-white);
+    padding: 80px 40px;
+    margin-top: 120px;
+    border-radius: 10px;
+
+    @include media-breakpoint-only(md) {
+        margin-top: 90px;
+    }
+
+    @include for-sm {
+        margin-top: 80px;
+    }
+
+    .form-box {
+        margin-bottom: 25px;
+
+        input {
+            transition: 0.3s;
+            outline: 0;
+            width: 100%;
+            height: 60px;
+            background: var(--theme-color4);
+            border-radius: 10px;
+            padding: 0 30px;
+            border: 0;
+
+            &::placeholder {
+                color: var(--text-color);
+                font-family: var(--text-font);
+                font-weight: 400;
+                font-size: 17px;
+            }
+        }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+            border: 0;
+            border-radius: 10px;
+            padding: 25px 30px;
+            background: var(--theme-color4);
+            outline: 0;
+
+            &::placeholder {
+                color: var(--text-color);
+                font-family: var(--text-font);
+                font-weight: 400;
+                font-size: 17px;
+            }
+        }
+    }
+
+    .contact-form {
+
+        margin-top: 15px;
+
+        button {
+            display: inline-block;
+            font-family: var(--text-font);
+            color: var(--theme-color-white);
+            background-color: var(--theme-color2);
+            padding: 15px 40px;
+            font-weight: 500;
+            font-size: 18px;
+            border-radius: 45px;
+            position: relative;
+            z-index: 1;
+            transition: all 300ms ease;
+
+            &::after {
+                position: absolute;
+                content: "";
+                width: 0;
+                height: 100%;
+                left: 50%;
+                top: 0;
+                background: var(--theme-color1);
+                z-index: -1;
+                border-radius: 45px;
+                transition: all 300ms ease;
+            }
+
+            &:hover::after {
+                width: 100%;
+                left: 0;
+            }
+        }
+    }
+}

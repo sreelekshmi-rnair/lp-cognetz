@@ -1,0 +1,104 @@
+/*===============================================
+Template Name: Solveta - IT Solutions & Technology HTML5 Template
+Author:  https://themeforest.net/user/dreamit-solution/portfolio
+Description: Description
+Version: 1.0.0
+Text Domain: Solveta
+Tags:  agency, ai, business, chatgpt, cyber security, education, it agency, it services, it solutions, security, software, software company, tech, technology, technology company
+================================================*/
+
+/************ TABLE OF CONTENTS ***************
+1. Fonts
+2. Reset
+3. Global Settings
+4. Main Header / TWO / Three / Four / Five
+5. Sticky Header 
+6. Mobile Menu
+7. Section Title
+8. Page Title
+9. Main Slider
+10. Banner Section / Two / Three / Four
+11. Features Section / Two / Three / Four / Five / Six
+12. About Section / Two / Three / Four / Five / Six
+13. Services Section / Two / Three / Four / Five
+14. Map Section
+15. Call To Action / Two / Three / Four / Five
+16. Locations Section / Two
+17. Offer Section / Two / Three / Four
+18. FAQ's Sectiom / Two
+19. Work Section
+20. Fun Fact Section / Two
+21. Project Section / Two / Three
+22. Testimonial Section / Two / Three / Four
+23. Why Choose Us / Two / Three
+24. Industries Section
+25. Pricing Section
+26. team Section / Two
+27. Contact Sectiom / Two / Three / Four
+28. News Section / Two
+29. Clients Section
+30. Main Footer
+**********************************************/
+
+@import "scss-bootstrap/functions";
+@import "scss-bootstrap/variables";
+@import "scss-bootstrap/mixins";
+
+@import "common/root.scss";
+@import "common/mixing.scss";
+@import "common/loader.scss";
+@import "common/boxed-layout.scss";
+@import "common/animation.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Space+Grotesk:wght@300..700&display=swap');
+
+@import url('animate.css');
+@import url('swiper.min.css');
+@import url('magnific.css');
+@import url('linear.css');
+@import url('fontawesome-free.css');
+@import url('fontawesome.css');
+@import url('flaticon.css');
+@import url('flaticon-set-business.css');
+@import url('tm-bs-mp.css');
+@import url('tm-utility-classes.css');
+@import url('odometer-theme-default.css');
+@import url('cusor-text.css');
+@import url('nice-select.css');
+
+
+// import SCSS components one by one
+@import "reset.scss";
+@import "header.scss";
+@import "mobile-menu.scss";
+@import "offcanvas.scss";
+@import "section-title.scss";
+@import "banner.scss";
+@import "category.scss";
+@import "service.scss";
+@import "about.scss";
+@import "button.scss";
+@import "journey.scss";
+@import "project.scss";
+@import "why-choose.scss";
+@import "video.scss";
+@import "marquee.scss";
+@import "work-process.scss";
+@import "team.scss";
+@import "testimonial.scss";
+@import "blog.scss";
+@import "footer.scss";
+@import "pricing.scss";
+@import "faqs.scss";
+@import "search-popup.scss";
+@import "contact.scss";
+
+
+//inner
+@import "inner/page-title.scss";
+@import "inner/blog-details.scss";
+@import "inner/service-details.scss";
+@import "inner/breadcumb.scss";
+@import "inner/blog-grid.scss";
+@import "inner/team-details.scss";
+@import "inner/portfolio-details.scss";
